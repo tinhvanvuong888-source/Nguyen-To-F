@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyên tố F (Fluor)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #d9e4ff, #f7f9ff);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            color: #2457f5;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .symbol-box {
+            font-size: 60px;
+            font-weight: 600;
+            text-align: center;
+            width: 120px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            background: #2457f5;
+            color: white;
+            box-shadow: 0 5px 15px rgba(36,87,245,0.4);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            width: 30%;
+            background: #f0f4ff;
+            font-weight: 600;
+            color: #2457f5;
+        }
+
+        tr:hover {
+            background: #f7faff;
+        }
+
+        .btn-box {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+            background: #2457f5;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1a3fb5;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Nguyên tố F – Fluor</h1>
+    <div class="symbol-box">F</div>
+
+    <table>
+        <tr><th>Tên tiếng Việt</th><td>Flu-o</td></tr>
+        <tr><th>Tên tiếng Anh</th><td>Fluor</td></tr>
+        <tr><th>Phiên âm</th><td>/ˈflʊər/</td></tr>
+        <tr><th>Số thứ tự ô</th><td>9</td></tr>
+        <tr><th>Nguyên tử khối</th><td>18.998 u</td></tr>
+        <tr><th>Độ âm điện</th><td>3.98</td></tr>
+        <tr><th>Nhóm</th><td>VIIA (Nhóm A)</td></tr>
+        <tr><th>Chu kì</th><td>2</td></tr>
+        <tr><th>Cấu hình electron</th><td>1s² 2s² 2p⁵</td></tr>
+        <tr><th>Số oxi hoá</th><td>-1</td></tr>
+        <tr>
+            <th>Tính chất vật lý</th>
+            <td>
+                • Là khí màu vàng lục nhạt.<br>
+                • Có tính oxy hóa mạnh nhất trong các nguyên tố.<br>
+                • Dễ dàng hóa lỏng và dễ bay hơi.
+            </td>
+        </tr>
+
+        <tr>
+            <th>Tính chất hóa học</th>
+            <td>
+                • Fluor có tính oxy hóa rất mạnh, có thể phản ứng với hầu hết các nguyên tố và hợp chất.<br>
+                • Phản ứng mạnh với nước tạo thành axit hydrofluoric (HF).
+            </td>
+        </tr>
+
+        <tr>
+            <th>Ứng dụng</th>
+            <td>
+                • Dùng trong công nghiệp hóa chất như sản xuất nhựa teflon.<br>
+                • Làm tác nhân làm lạnh trong các hệ thống lạnh.<br>
+                • Sử dụng trong sản xuất thuốc trừ sâu.
+            </td>
+        </tr>
+
+        <tr>
+            <th>Phương trình phản ứng</th>
+            <td>
+                F₂ + H₂O → 2HF + O₂<br>
+                2Na + F₂ → 2NaF
+            </td>
+        </tr>
+    </table>
+
+    <div class="btn-box">
+        <button onclick="speak('Flu o', 'vi-VN')">Phát âm Tiếng Việt</button>
+        <button onclick="speak('Fluor', 'en-US')">Phát âm Anh – Mỹ</button>
+        <button onclick="speak('Fluor', 'en-GB')">Phát âm Anh – Anh</button>
+    </div>
+</div>
+
+<script>
+function speak(text, lang) {
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang;
+    speechSynthesis.speak(u);
+}
+</script>
+
+</body>
+</html>
